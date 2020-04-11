@@ -1,0 +1,18 @@
+<li class="list-group-item" *ngIf="getStatus()" style="background:rgba(223, 252, 223, 0.5);">
+    Appareil : {{getName()}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span style=" position: absolute; right:3px;bottom:5px;">
+        <button [(ngModel)]="appareilName" *ngIf="appareilStatus" class="btn btn-danger" (click)="offIt()">Off</button>
+        <button *ngIf="!appareilStatus" class="btn btn-success" (click)="onIt()">On</button>
+    </span>
+</li>
+
+
+<li class="list-group-item" *ngIf="!getStatus()" style="background:rgba(255, 191, 207, 0.164);">
+    Appareil : {{getName()}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span style=" position: absolute; right:3px;bottom:5px;">
+        <button [(ngModel)]="appareilName" *ngIf="appareilStatus" class="btn btn-danger" (click)="offIt()">Off</button>
+        <button *ngIf="!appareilStatus" class="btn btn-success" (click)="onIt()">On</button>
+    </span>
+</li>
+
+<br>

@@ -1,0 +1,24 @@
+<title>{{title}}</title>
+<div class="appli" style="text-align: center;">
+  <h1>Bienvenue {{title}}</h1>
+  <br><br><br><br>
+  <div class="container" style="text-align: left;">
+    <div class="row">
+      <div>
+        <h2>Liste des appareils de {{title}}</h2>
+        <ul class="list-group list-group-item  backd">
+          <app-appareil appareilName="Frigo" appareilStatus="On"></app-appareil>
+          <app-appareil appareilName="Televiseur" appareilStatus="Off"></app-appareil>
+          <app-appareil appareilName="Ordinateur" appareilStatus="on"></app-appareil>
+          <!--
+            <app-appareil appareilName="Machine a laver"></app-appareil>
+            <app-appareil appareilName="Micro-onde"></app-appareil>
+            <app-appareil appareilName="Moulinex"></app-appareil>
+          -->
+        </ul>
+        <br>
+        <button class="btn btn-success" [disabled]="!isAuth" (click)="onAllume()">Tout allumer</button>
+      </div>
+    </div>
+  </div>
+</div>
